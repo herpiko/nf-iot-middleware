@@ -1,16 +1,20 @@
 # nf-iot-middleware
 
-Requirement :
+### Requirement :
 
 - node v4.x
 
-Run :
+### Run :
 
 - Clone to vps side
 - ``npm install``
 - ``PORT=3000 node index.js``
 
-See also :
+### License
+
+MIT
+
+### See also :
 
 - https://github.com/herpiko/nf-iot-end
 - https://github.com/herpiko/nf-iot-ng
