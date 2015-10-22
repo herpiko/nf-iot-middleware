@@ -1,6 +1,6 @@
 # nf-iot-middleware
 
-Requirement : 
+Requirement :
 
 - node v4.x
 
@@ -8,7 +8,7 @@ Run :
 
 - Clone to vps side
 - ``npm install``
-- ``node index.js``
+- ``PORT=3000 node index.js``
 
 See also :
 
