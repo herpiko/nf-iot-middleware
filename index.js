@@ -37,6 +37,16 @@ io.sockets.on("connection", function(socket){
     console.log("pi send value " + data + " from switch1");
     io.to("ng").emit("message", data);
   });
+  
+  // DHT11 sensor
+  socket.on("dht11", function(data){
+    console.log("pi send value " + JSON.stringify(data) + " from dht11 sensor");
+    var msg = {
+      sensor : "dht11",
+      data : data
+    }
+    io.to("ng").emit("message", msg);
+  });
 });
 
 
