@@ -2,9 +2,9 @@ var app = require("express")();
 var server = require("http").createServer(app);
 var io = require("socket.io").listen(server);
 
-var port = process.env.PORT || 3000;
+var port = process.env.PORT || 2999;
 server.listen(port);
-console.log("Running on PORT 3000");
+console.log("Running on PORT " + port);
 
 // Basic routing
 // ng --> middleware --> end
@@ -40,7 +40,7 @@ io.sockets.on("connection", function(socket){
   
   // DHT11 sensor
   socket.on("dht11", function(data){
-    console.log("pi send value " + JSON.stringify(data) + " from dht11 sensor");
+    /* console.log("pi send value " + JSON.stringify(data) + " from dht11 sensor"); */
     var msg = {
       sensor : "dht11",
       data : data
