@@ -8,7 +8,7 @@ console.log("Running on PORT 3000");
 
 // Basic routing
 // ng --> middleware --> end
-app.get("/led1", function(req, res){
+app.get("/api/led1", function(req, res){
   io.to("end").emit("command", {key: "led1", value: req.query.value});
   res.send({success:true});
 });
